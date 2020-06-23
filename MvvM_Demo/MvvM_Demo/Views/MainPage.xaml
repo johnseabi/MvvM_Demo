@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvM_Demo.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="10">
+            <Label Text="Name"/>
+            <Entry Text="{Binding Name}" Placeholder="Full name"/>
+
+            <Label Text="website"/>
+            <Entry Text="{Binding Website}" Placeholder="https://www.google.com"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Best friend?"/>
+                <Switch IsToggled="{Binding BestFriend}"/>
+            </StackLayout>
+
+            <Label Text="{Binding DisplayMessage}"/>
+            
+            <Button Text="Open Website" CornerRadius="20"
+                    BackgroundColor="DeepSkyBlue"/>
+            <Button Text="Save Contact"  CornerRadius="20"
+                    BackgroundColor="DeepSkyBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
